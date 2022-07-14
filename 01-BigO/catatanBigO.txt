@@ -1,0 +1,90 @@
+///panduan Big O  
+https://www.bigocheatsheet.com/ 
+
+
+big O(n) adalah n adalah arah horisontal ygmana sumbu x 
+dan O adalah arah sumbu y hasil operationalnya
+jadi macam nilai x y 1 1 pada grafik dst miring -tegak lurus kesamgping atas
+nah jika makin buruk maka nilai O -operationalnya akan akan tinggi 
+cotoh pada file logItems
+
+ function logItems(n) {
+    for(let i=0;i <n;i++) {
+        console.log(n)
+    }
+ }
+
+ nah pada yg kedua kita akan mmbuat drop constant n yg artinya 
+ kita akan mmbuat tambahan kalang loop didalamnya yg sejajar dgn loop
+ yg pertama sehingga 
+ function logItems(n) {
+    for(let i=0;i <n;i++) {
+        console.log(n)
+    }
+   
+    for(let i=0;i <n;i++) {
+        console.log(n)
+    }
+ 
+ }
+jika kita hitung jumlah n pada < n kebawah sbgai simbol itu artinya 
+n+n  yg mana = 2n maka sekarang bigO = O(2n)
+ygmana ini sama saja O(n)  
+jadi dalam opersi jika banyak loop2 yg sejajar itu artinya tetap sama yaitu 
+O(n) sbrarpa bayak merka 
+/*
+
+///Pola O(n^2) --->pola yg harus dihindari utk selesaikan masalah !
+
+dibawan ini adalah pola big O n kwadrat dimana sbuah kalang lopp
+diisi kalang loop lain dimana dia tidak sejajar sprti drop(n) 
+tapi ini adalah (n^2) atau sebanyak apapun itu artinya ada loop dalam kalang loop
+yg lain  jika n^2 maka ada 2 kalang loop ,
+jika n^3 maka adalah 3 kalang loop 
+ini harus /wajib dihindari pola ini sbb contoh 
+function nKwadrat(n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      for (let k = 0; k < n; k++) {
+        console.log(i, j, k)
+      }
+    }
+  }
+}
+
+nKwadrat(10)
+*/
+
+
+//// judul x 
+
+
+
+
+///// judul x2 
+
+
+
+
+
+///BIG O pada Array ////
+operasi O(1) -operasi yg tidak tergantung pada waktu  O(n)
+nah pada array ada 2 opersi ygtidak terngatung waktu yatiu 
+-opersai push dan pull
+-push utk isi pada akhirindex pada eleemnt array jadi gak ganggu buat index
+     susun lagi pada element2 array 
+-pop adalah juga sama ambil pada index terakhir shingga gak ganngu susunan index 
+
+-sendangkan operasi :shift nah ini remove array pada pertama element shingga
+index2 yg elelemt 1 jadi element-2 jadi terdesak trus smua mengkibat merstrukture
+indexnya maka ini disebut operasi O(n) tantung waktu dan banyak
+unshift juga sma insert pada index ertaman shingga merstruktur smua index eleemnt array  sblunya shingga ini operasi maka waktu O(n)
+
+-splice adalah opersi big O(n ) karena opersi splice ini mengunakan index 
+utk nambah pada index adress tertentu pada element aarray dan juga saman 
+meremove index address tertentu pada element aray  
+jadi operasi splice bisa utk remove dan tambah 
+metodenya 
+array.splice(start,removeCOunt,newItem,newItem,newItem)
+
+
